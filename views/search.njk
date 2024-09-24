@@ -1,0 +1,15 @@
+{% extends "layout.njk" %}
+{% block content %}
+<main class="container">
+    <h1>{{ title }}</h1>
+    <form action="/search" method="get">
+        <input type="text"
+            name="q">
+        <button type="submit">search</button>
+    </form>
+    <p>du sökte efter {{ query }}</p>
+    
+    <p>vi hittade {{ names }}</p>
+</main>
+
+{% endblock %}
